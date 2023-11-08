@@ -76,7 +76,7 @@ void AVRG_D_HumanCharacter::BeginPlay()
 		//SetWindowLongPtr(hwnd, GWL_EXSTYLE, WS_EX_TRANSPARENT);
 		SetWindowLongPtr(hwnd, GWL_EXSTYLE, GetWindowLong(hwnd, GWL_EXSTYLE) | WS_EX_LAYERED);
 		SetLayeredWindowAttributes(hwnd, 0, 127, LWA_ALPHA);
-		UpdateLayeredWindow(hwnd,)
+		//UpdateLayeredWindow(hwnd,)
 		//
 		//RECT rect;
 		//GetWindowRect(hwnd, &rect);
