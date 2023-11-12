@@ -68,24 +68,6 @@ void AVRG_D_HumanCharacter::BeginPlay()
 		}
 	}
 
-	const auto hwnd = GetActiveWindow();
-
-	if (hwnd)
-	{	
-		SetWindowLongPtr(hwnd, GWL_STYLE, WS_VISIBLE);
-		//SetWindowLongPtr(hwnd, GWL_EXSTYLE, WS_EX_TRANSPARENT);
-		SetWindowLongPtr(hwnd, GWL_EXSTYLE, GetWindowLong(hwnd, GWL_EXSTYLE) | WS_EX_LAYERED);
-		SetLayeredWindowAttributes(hwnd, 0, 127, LWA_ALPHA);
-		//UpdateLayeredWindow(hwnd,)
-		//
-		//RECT rect;
-		//GetWindowRect(hwnd, &rect);
-		//SetWindowPos(hwnd, HWND_TOPMOST, rect.left, rect.top, rect.right - rect.left, rect.bottom - rect.top, SWP_SHOWWINDOW);
-		
-		//const MARGINS margins{ -1 };
-		//DwmExtendFrameIntoClientArea(hwnd, &margins);
-	}
-
 }
 
 //////////////////////////////////////////////////////////////////////////
