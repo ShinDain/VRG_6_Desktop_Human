@@ -283,5 +283,6 @@ Plugins/**/Intermediate/*
 
 Content/MetaHumans/*
 Plugins/*
+Config/*
 
 # End of https://www.toptal.com/developers/gitignore/api/unrealengine,c++,python
