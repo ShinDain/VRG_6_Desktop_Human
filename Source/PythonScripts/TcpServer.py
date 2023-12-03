@@ -3,66 +3,32 @@
 # This works as a bridge between Unreal Engine and Python by allowing the exchanging of data through a local TCP socket connection.
 
 
-# # # # # # # # # # # # # # # # # ## # # # # # # # # # # # # # # # # ################                                 ##############        ########################
-# XXX XXX XXX XXX XXX XXX XXX XXX ## XXX XXX XXX XXX XXX XXX XXX XXX ################         ############            ################      ########################
-# XXX XXX# # # # # # # # #XXX XXX ## XXX XXX# # # # # # # # #XXX XXX ###                    ####        ####          ###           ###                ### 
-# XXX #         ###         # XXX ## XXX #         ###         # XXX ###                  ###              ###        ###            ###               ### 
-# XXX #       ### ###       # XXX ## XXX #       ### ###       # XXX ###                ###                  ###      ###            ###               ### 
-# XXX #      ###   ###      # XXX ## XXX #      ###   ###      # XXX ############      ###                    ###     ###           ###                ### 
-# XXX #     ###  X  ###     # XXX ## XXX #     ###  X  ###     # XXX ############      ###                    ###     ###         ###                  ### 
-# XXX #      ###   ###      # XXX ## XXX #      ###   ###      # XXX ###               ###                    ###     #############                    ### 
-# XXX #       ### ###       # XXX ## XXX #       ### ###       # XXX ###                ###                  ###      ###         ###                  ### 
-# XXX #         ###         # XXX ## XXX #         ###         # XXX ###                 ###                ###       ###           ###                ### 
-# XXX XXX# # # # # # # # #XXX XXX ## XXX XXX# # # # # # # # #XXX XXX ###                  ###              ###        ###             ###              ### 
-# XXX XXX XXX XXX XXX XXX XXX XXX ## XXX XXX XXX XXX XXX XXX XXX XXX ###                   ###            ###         ###              ###             ### 
-# # # # # # # # # # # # # # # # # ## # # # # # # # # # # # # # # # # ###                     ##############           ###               ###            ###                                
-                  #################################
-                  #  |_|_|_|_|_|_|_|_|_|_|_|_|_|  #                  #####################################################################################################
-                  #  | | | | | | | | | | | | | |  #
-                  #################################
-
-
-
 print("""
-
-Developed by Fortbonnitar
-
-####   #    # #   # # # # # 
-#     # #   #  #      #
-##   #   #  ###       #
-#     # #   #  #      #
-#      #    #   #     #
-# # # # # # # # # # # # # # 
+========================
+Unreal_Python_TCP_Bridge
+========================
 """)
-
-
-
-
 
 import socket
 
-
 debug = False
-
-
 
 ##########################################################################################
 # Set this script as a TCP-Server and create the socket and listen for Unreal connection 
 ###########################################################################################
 
 class TCP:
-    def __init__(self, ip_adress: str='127.0.0.1', port: int=8000):
+    def __init__(self, ip_address: str='127.0.0.1', port: int=8000):
         self.running = True
-        self.ip_adress = ip_adress
+        self.ip_address = ip_address
         self.port = port
         self.debug = True
 
         # Create a TCP socket
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-
         # Bind the server socket to a specific IP address and port
-        self.server_address = (self.ip_adress, self.port)
+        self.server_address = (self.ip_address, self.port)
         self.server_socket.bind(self.server_address)
 
     def listen(self):
@@ -75,14 +41,11 @@ class TCP:
         print(f"Client connected: {self.client_address}")
 
 
-
-
         ##############################################################################
         # After Connection established successfully, if data recieved set as variable
         ###############################################################################
 
 
-        
     def get_incoming(self):
         # Main Loop
         while self.running:
@@ -95,16 +58,24 @@ class TCP:
                 if self.debug == True:
                     print(f'data as string = {self.in_data}')
 
-                
-                self.send_data(f'Recieved--> {self.in_data} <--  in python and send this back for testing')
+                order = self.in_data.split(':')
+                if order[0] == '01':
+                    #function 1
+                    answer = (f'order 01')
+                elif order[0] == '02':
+                    #function 2
+                    answer = (f'order 02')
+                else:
+                    answer = (f'not linked')
+
+                self.out_data = answer
+                self.send_data(f'{self.out_data}')
             
             except Exception as e:
                 print(e)
+                exit()
 
 
-
-
-            
             
     def send_data(self, data_string, encoding='utf-8'):
             # Converting the sending data from string to bytes 
