@@ -1,0 +1,4 @@
+pip install langchain
+pip install google-search-results
+pip install configparser
+pip install numexpr
