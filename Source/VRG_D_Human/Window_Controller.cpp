@@ -55,7 +55,7 @@ void UWindow_Controller::MoveWindow(int x, int y)
 	int width = rect.right - rect.left;
 	int height = rect.bottom - rect.top;
 
-	SetWindowPos(m_hWnd, NULL, x, y, width, height, 0);
+	SetWindowPos(m_hWnd, HWND_TOPMOST, x, y, width, height, 0);
 }
 
 void UWindow_Controller::ResizeWindow(int width, int height)
@@ -63,6 +63,6 @@ void UWindow_Controller::ResizeWindow(int width, int height)
 	RECT rect;
 	GetWindowRect(m_hWnd, &rect);
 
-	SetWindowPos(m_hWnd, NULL, rect.left, rect.top, width, height, 0);
+	SetWindowPos(m_hWnd, HWND_TOPMOST, rect.left, rect.top, width, height, 0);
 }
 
