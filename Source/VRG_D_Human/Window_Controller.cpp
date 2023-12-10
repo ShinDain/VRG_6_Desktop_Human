@@ -22,6 +22,8 @@ void UWindow_Controller::BeginPlay()
 	// ...
 	m_hWnd = GetActiveWindow();
 
+	//SetWindowLong(m_hWnd, GWL_STYLE, GetWindowWord(m_hWnd, GWL_STYLE) & ~WS_SIZEBOX);
+
 }
 
 
@@ -64,5 +66,20 @@ void UWindow_Controller::ResizeWindow(int width, int height)
 	GetWindowRect(m_hWnd, &rect);
 
 	SetWindowPos(m_hWnd, HWND_TOPMOST, rect.left, rect.top, width, height, 0);
+}
+
+FVector2D UWindow_Controller::GetViewportSize()
+{
+	FVector2D viewportSize = FVector2D(GEngine->GameViewport->Viewport->GetSizeXY());
+
+	return viewportSize;
+}
+
+FVector2D UWindow_Controller::GetMouseCursorPosition()
+{
+	POINT mousePos;
+	GetCursorPos(&mousePos);
+
+	return FVector2D(mousePos.x, mousePos.y);
 }
 

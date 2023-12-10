@@ -34,5 +34,11 @@ public:
 
 	UFUNCTION(blueprintcallable, Category=WControll)
 	void ResizeWindow(int width, int height);
+
+	UFUNCTION(blueprintcallable, Category = WControll)
+	FVector2D GetViewportSize();
+
+	UFUNCTION(blueprintcallable, Category = WControll)
+	FVector2D GetMouseCursorPosition();
 		
 };
