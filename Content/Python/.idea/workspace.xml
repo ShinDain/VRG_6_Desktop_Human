@@ -37,7 +37,7 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/KIM/Documents/GitHub/VRG_6_Desktop_Human/Content/Python&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.weather">
+  <component name="RunManager" selected="Python.AI">
     <configuration name="AI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -145,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.weather" />
+        <item itemvalue="Python.AI" />
         <item itemvalue="Python.text" />
+        <item itemvalue="Python.weather" />
         <item itemvalue="Python.news" />
         <item itemvalue="Python.generateAnwserByGPT" />
-        <item itemvalue="Python.AI" />
       </list>
     </recent_temporary>
   </component>
