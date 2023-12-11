@@ -7,7 +7,10 @@
 		{
 			"Name": "VRG_D_Human",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
 		}
 	],
 	"Plugins": [
@@ -47,6 +50,10 @@
 		{
 			"Name": "HairStrands",
 			"Enabled": true
+		},
+		{
+			"Name": "ConvaiOVRLipSync",
+			"Enabled": false
 		}
 	]
 }
