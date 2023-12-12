@@ -47,4 +47,9 @@ public:
 	UFUNCTION(blueprintcallable, Category = KeyboardState)
 	bool CheckKeyboard_F8();
 
+	UFUNCTION(blueprintcallable, Category = MornitorInfo)
+	int GetMornitorWidth();
+
+	UFUNCTION(blueprintcallable, Category = MornitorInfo)
+	int GetMornitorHeight();
 };

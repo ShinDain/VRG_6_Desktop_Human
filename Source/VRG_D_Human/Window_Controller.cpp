@@ -101,3 +101,13 @@ bool UWindow_Controller::CheckKeyboard_F8()
 	return false;
 }
 
+int UWindow_Controller::GetMornitorWidth()
+{
+	return GetSystemMetrics(SM_CXSCREEN);
+}
+
+int UWindow_Controller::GetMornitorHeight()
+{
+	return GetSystemMetrics(SM_CYSCREEN);
+}
+
