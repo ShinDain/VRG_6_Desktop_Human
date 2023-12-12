@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c07e08e4-2486-466b-a49c-38695e187fd3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI.py" beforeDir="false" afterPath="$PROJECT_DIR$/AI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news.py" beforeDir="false" afterPath="$PROJECT_DIR$/news.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather.py" beforeDir="false" afterPath="$PROJECT_DIR$/weather.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,13 +34,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/KIM/Documents/GitHub/VRG_6_Desktop_Human/Content/Python&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/KIM/Documents/GitHub/VRG_6_Desktop_Human/Content/Python"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Python.AI">
     <configuration name="AI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python" />
@@ -146,9 +150,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.AI" />
-        <item itemvalue="Python.text" />
-        <item itemvalue="Python.weather" />
         <item itemvalue="Python.news" />
+        <item itemvalue="Python.weather" />
+        <item itemvalue="Python.text" />
         <item itemvalue="Python.generateAnwserByGPT" />
       </list>
     </recent_temporary>
