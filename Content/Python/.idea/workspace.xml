@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c07e08e4-2486-466b-a49c-38695e187fd3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather.py" beforeDir="false" afterPath="$PROJECT_DIR$/weather.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core/FP_Vision_pawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/../Core/FP_Vision_pawn.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core/Widget/Chat_Cpy_WB.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/../Core/Widget/Chat_Cpy_WB.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core/Widget/WB_MouseDropDown.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/../Core/Widget/WB_MouseDropDown.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core/Widget/WB_NewsDropDown.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/../Core/Widget/WB_NewsDropDown.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AI.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generateAnwserByGPT.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/intro.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Source/PythonScripts/TcpServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Source/PythonScripts/TcpServer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,13 +38,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/KIM/PycharmProjects/pythonProject"
-  }
-}]]></component>
   <component name="RunManager" selected="Python.weather">
     <configuration name="AI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python" />

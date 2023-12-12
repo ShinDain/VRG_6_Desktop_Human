@@ -89,5 +89,10 @@ def scrape_weather_and_dust():
 
     print("미세: {}{} 초미세: {}{}".format(fine_dust,fine_dust_grade, ultra_dust, ultra_dust_degree))
 
+    outstr = f'지역:{location_name}\n' \
+             f'기온:{curr_temp} | 오늘 {min_temp} | 오늘 {max_temp}\n 날씨: {cast_string}\n' \
+             f'강수: 오전{morning_rainfall} | 오후{afternoon_rainfall}\n\n미세: {fine_dust}{fine_dust_grade} 초미세: {ultra_dust}{ultra_dust_degree} 입니다.'
+    return outstr
+
 # 함수 직접 호출
-scrape_weather_and_dust()
+#scrape_weather_and_dust()

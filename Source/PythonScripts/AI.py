@@ -71,29 +71,58 @@ def initialize_conversation():
         {"role": "user", "content": "안녕하세요!"}
     ]
 
-def chat():
+def chat(inputText):
     # 초기 대화 설정
     conversation = initialize_conversation()
 
-    while True:
-        user_input = input("사용자: ")
+    user_input = inputText
 
-        if user_input.startswith("http"):
-            page_content = get_text_from_url(user_input)
+    outstr = ''
 
-            if page_content:
-                summary = generate_summary(f'지금 뒤에 오는 본문 요약해줘, {page_content}')
-                print("ChatGPT:", summary)
-                conversation.extend([{"role": "user", "content": user_input}, {"role": "assistant", "content": summary}])
-            else:
-                print("ChatGPT: 페이지 본문을 가져올 수 없습니다.")
+    if user_input.startswith("http"):
+        page_content = get_text_from_url(user_input)
+
+        if page_content:
+            summary = generate_summary(f'지금 뒤에 오는 본문 3줄 요약해줘, {page_content}')
+            #print("ChatGPT:", summary)
+            outstr = summary
+            conversation.extend([{"role": "user", "content": user_input}, {"role": "assistant", "content": summary}])
         else:
-            conversation.append({"role": "user", "content": user_input})
-            response = generate_summary(user_input)
-            print("ChatGPT:", response)
-            conversation.extend([{"role": "assistant", "content": response}])
+            #print("ChatGPT: 페이지 본문을 가져올 수 없습니다.")
+            outstr = "ChatGPT: 페이지 본문을 가져올 수 없습니다."
+    else:
+        conversation.append({"role": "user", "content": user_input})
+        response = generate_summary(user_input)
+        #print("ChatGPT:", response)
+        outstr = response
+        conversation.extend([{"role": "assistant", "content": response}])
 
-        # 대화 기록을 일정한 크기(예: 5개 메시지)로 유지
-        conversation = conversation[-5:]
+    return outstr
 
-chat()
+    # 대화 기록을 일정한 크기(예: 5개 메시지)로 유지
+    conversation = conversation[-5:]
+
+
+    #
+    # while True:
+    #     user_input = input("사용자: ")
+    #
+    #     if user_input.startswith("http"):
+    #         page_content = get_text_from_url(user_input)
+    #
+    #         if page_content:
+    #             summary = generate_summary(f'지금 뒤에 오는 본문 요약해줘, {page_content}')
+    #             print("ChatGPT:", summary)
+    #             conversation.extend([{"role": "user", "content": user_input}, {"role": "assistant", "content": summary}])
+    #         else:
+    #             print("ChatGPT: 페이지 본문을 가져올 수 없습니다.")
+    #     else:
+    #         conversation.append({"role": "user", "content": user_input})
+    #         response = generate_summary(user_input)
+    #         print("ChatGPT:", response)
+    #         conversation.extend([{"role": "assistant", "content": response}])
+    #
+    #     # 대화 기록을 일정한 크기(예: 5개 메시지)로 유지
+    #     conversation = conversation[-5:]
+
+#chat('https://www.inflearn.com/questions/159463/attributeerror-x27-nonetype-x27-object-has-no-attribute-x27-text-x27-%EC%98%A4%EB%A5%98%EA%B0%80')

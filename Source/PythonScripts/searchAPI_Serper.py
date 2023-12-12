@@ -15,7 +15,7 @@ os.environ['SERPER_API_KEY']= api_config["OPENAI"]["SERPER_KEY"]
 
 ask_prompt = PromptTemplate(
     input_variables=["contents"],
-    template="다음 질문을 한국어로 답해줘. '{contents}'"
+    template="다음 질문을 150자 이내의 한국어로 답해줘. '{contents}'"
 )
 
 llm = OpenAI(temperature=0)

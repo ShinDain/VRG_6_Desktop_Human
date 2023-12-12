@@ -9,6 +9,8 @@ def scrape_politics_headline_news():
         soup = BeautifulSoup(res.text, "lxml")
         return soup
 
+    outstr = ''
+
     print("[정치뉴스 헤드라인]")
     url = "https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=100"
     soup = create_soup(url)
@@ -18,11 +20,15 @@ def scrape_politics_headline_news():
         if title_tag:
             title = title_tag.get_text(strip=True)
             link = title_tag['href']
-            print("{}. {}".format(index + 1, title))
-            print("(링크 : {})".format(link))
+            outstr = outstr + f'{index + 1}. {title}\n'
+            #outstr = outstr + f'{index + 1}. {title}\n(링크 : {link})\n'
+            # print("{}. {}".format(index + 1, title))
+            # print("(링크 : {})".format(link))
         else:
-            print("뉴스 {}의 제목을 찾을 수 없습니다.".format(index + 1))
+            # print("뉴스 {}의 제목을 찾을 수 없습니다.".format(index + 1))
+            outstr = f'뉴스 {index + 1}의 제목을 찾을 수 없습니다.'
 
+    return outstr
 
 # 2
 def scrape_economy_headline_news():
@@ -31,6 +37,8 @@ def scrape_economy_headline_news():
         res.raise_for_status()
         soup = BeautifulSoup(res.text, "lxml")
         return soup
+
+    outstr = ''
 
     print("[경제뉴스 헤드라인]")
     url = "https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=101"
@@ -41,11 +49,15 @@ def scrape_economy_headline_news():
         if title_tag:
             title = title_tag.get_text(strip=True)
             link = title_tag['href']
-            print("{}. {}".format(index + 1, title))
-            print("(링크 : {})".format(link))
+            outstr = outstr + f'{index + 1}. {title}\n'
+            #outstr = outstr + f'{index + 1}. {title}\n(링크 : {link})\n'
+            # print("{}. {}".format(index + 1, title))
+            # print("(링크 : {})".format(link))
         else:
-            print("뉴스 {}의 제목을 찾을 수 없습니다.".format(index + 1))
+            # print("뉴스 {}의 제목을 찾을 수 없습니다.".format(index + 1))
+            outstr = f'뉴스 {index + 1}의 제목을 찾을 수 없습니다.'
 
+    return outstr
 
 # 3
 def scrape_society_headline_news():
@@ -54,6 +66,8 @@ def scrape_society_headline_news():
         res.raise_for_status()
         soup = BeautifulSoup(res.text, "lxml")
         return soup
+
+    outstr = ''
 
     print("[사회뉴스 헤드라인]")
     url = "https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=102"
@@ -64,11 +78,15 @@ def scrape_society_headline_news():
         if title_tag:
             title = title_tag.get_text(strip=True)
             link = title_tag['href']
-            print("{}. {}".format(index + 1, title))
-            print("(링크 : {})".format(link))
+            outstr = outstr + f'{index + 1}. {title}\n'
+            #outstr = outstr + f'{index + 1}. {title}\n(링크 : {link})\n'
+            # print("{}. {}".format(index + 1, title))
+            # print("(링크 : {})".format(link))
         else:
-            print("뉴스 {}의 제목을 찾을 수 없습니다.".format(index + 1))
+            # print("뉴스 {}의 제목을 찾을 수 없습니다.".format(index + 1))
+            outstr = f'뉴스 {index + 1}의 제목을 찾을 수 없습니다.'
 
+    return outstr
 
 # 4
 def scrape_culture_headline_news():
@@ -77,6 +95,8 @@ def scrape_culture_headline_news():
         res.raise_for_status()
         soup = BeautifulSoup(res.text, "lxml")
         return soup
+
+    outstr = ''
 
     print("[문화뉴스 헤드라인]")
     url = "https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=103"
@@ -87,11 +107,15 @@ def scrape_culture_headline_news():
         if title_tag:
             title = title_tag.get_text(strip=True)
             link = title_tag['href']
-            print("{}. {}".format(index + 1, title))
-            print("(링크 : {})".format(link))
+            outstr = outstr + f'{index + 1}. {title}\n'
+            #outstr = outstr + f'{index + 1}. {title}\n(링크 : {link})\n'
+            # print("{}. {}".format(index + 1, title))
+            # print("(링크 : {})".format(link))
         else:
-            print("뉴스 {}의 제목을 찾을 수 없습니다.".format(index + 1))
+            # print("뉴스 {}의 제목을 찾을 수 없습니다.".format(index + 1))
+            outstr = f'뉴스 {index + 1}의 제목을 찾을 수 없습니다.'
 
+    return outstr
 
 # 5
 def scrape_it_headline_news():
@@ -100,6 +124,8 @@ def scrape_it_headline_news():
         res.raise_for_status()
         soup = BeautifulSoup(res.text, "lxml")
         return soup
+
+    outstr = ''
 
     print("[IT뉴스 헤드라인]")
     url = "https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=105"
@@ -110,11 +136,15 @@ def scrape_it_headline_news():
         if title_tag:
             title = title_tag.get_text(strip=True)
             link = title_tag['href']
-            print("{}. {}".format(index + 1, title))
-            print("(링크 : {})".format(link))
+            outstr = outstr + f'{index + 1}. {title}\n'
+            #outstr = outstr + f'{index + 1}. {title}\n(링크 : {link})\n'
+            # print("{}. {}".format(index + 1, title))
+            # print("(링크 : {})".format(link))
         else:
-            print("뉴스 {}의 제목을 찾을 수 없습니다.".format(index + 1))
+            # print("뉴스 {}의 제목을 찾을 수 없습니다.".format(index + 1))
+            outstr = f'뉴스 {index + 1}의 제목을 찾을 수 없습니다.'
 
+    return outstr
 
 # 6
 def scrape_world_headline_news():
@@ -123,6 +153,8 @@ def scrape_world_headline_news():
         res.raise_for_status()
         soup = BeautifulSoup(res.text, "lxml")
         return soup
+
+    outstr = ''
 
     print("[세계뉴스 헤드라인]")
     url = "https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=104"
@@ -133,10 +165,15 @@ def scrape_world_headline_news():
         if title_tag:
             title = title_tag.get_text(strip=True)
             link = title_tag['href']
-            print("{}. {}".format(index + 1, title))
-            print("(링크 : {})".format(link))
+            outstr = outstr + f'{index + 1}. {title}\n'
+            #outstr = outstr + f'{index + 1}. {title}\n(링크 : {link})\n'
+            #print("{}. {}".format(index + 1, title))
+            #print("(링크 : {})".format(link))
         else:
-            print("뉴스 {}의 제목을 찾을 수 없습니다.".format(index + 1))
+            #print("뉴스 {}의 제목을 찾을 수 없습니다.".format(index + 1))
+            outstr = f'뉴스 {index + 1}의 제목을 찾을 수 없습니다.'
+
+    return outstr
 
 
 if __name__ == "__main__":
