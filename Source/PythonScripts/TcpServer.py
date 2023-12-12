@@ -55,6 +55,9 @@ class TCP:
                 # Data is firstly decoded from bytes to a string
                 self.in_data = data.decode()
 
+                if self.in_data == '':
+                    exit()
+
                 if self.debug == True:
                     print(f'data as string = {self.in_data}')
 
@@ -68,7 +71,8 @@ class TCP:
                 else:
                     answer = (f'not linked')
 
-                self.out_data = answer
+                # self.out_data = answer
+                self.out_data = self.in_data
                 self.send_data(f'{self.out_data}')
             
             except Exception as e:

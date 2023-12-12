@@ -94,7 +94,7 @@ bool UWindow_Controller::CheckKeyboard_F4()
 
 bool UWindow_Controller::CheckKeyboard_F8()
 {
-	if (GetAsyncKeyState(VK_F8))
+	if (GetAsyncKeyState(VK_F8) & 0x01)
 	{
 		return true;
 	}
