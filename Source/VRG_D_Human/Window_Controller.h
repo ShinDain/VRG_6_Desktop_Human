@@ -40,5 +40,11 @@ public:
 
 	UFUNCTION(blueprintcallable, Category = WControll)
 	FVector2D GetMouseCursorPosition();
-		
+	
+	UFUNCTION(blueprintcallable, Category = KeyboardState)
+	bool CheckKeyboard_F4();
+
+	UFUNCTION(blueprintcallable, Category = KeyboardState)
+	bool CheckKeyboard_F8();
+
 };

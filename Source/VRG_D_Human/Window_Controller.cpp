@@ -83,3 +83,21 @@ FVector2D UWindow_Controller::GetMouseCursorPosition()
 	return FVector2D(mousePos.x, mousePos.y);
 }
 
+bool UWindow_Controller::CheckKeyboard_F4()
+{
+	if (GetAsyncKeyState(VK_F4))
+	{
+		return true;
+	}
+	return false;
+}
+
+bool UWindow_Controller::CheckKeyboard_F8()
+{
+	if (GetAsyncKeyState(VK_F8))
+	{
+		return true;
+	}
+	return false;
+}
+
